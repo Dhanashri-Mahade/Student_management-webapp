@@ -1,0 +1,200 @@
+* { 
+	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html, body {
+	min-height: 100%;
+	background: #fff;
+	color: #000;
+}
+
+body, ul, ol, dl {
+	margin: 0;
+}
+article, aside, audio, 
+footer, header, nav, section, video {
+	display: block; 
+	}
+p { 
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+} 
+textarea { 
+	resize: vertical;
+}
+
+#topline {
+    height: 10px;
+    background-color: #294a70;
+}
+
+#logo {
+    width: 90px;
+    margin-right: 30px;
+}
+
+#topnav {
+    margin: 0 90px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+#topnav h1 {
+    font-size: 30px;
+    color: #294a70;
+    font-weight: 900;
+}
+
+#topnav p {
+    font-size: 20px;
+}
+
+#nav {
+    background-color: #294a70;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+    border-bottom: orange solid 3px;
+}
+
+#nav ul {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+#nav ul li {
+    list-style: none;
+    border-right: #fff solid 1px;
+    border-left: #fff solid 1px;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    padding: 18px 12px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+#nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 90px;
+    margin: 50px 0;
+}
+
+footer  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+    margin: 50px 0;
+}
+
+#maincard {
+    background-color: #ececec;
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+#loggedincard {
+    background-color: #ececec;
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+#sidecard {
+    background-color: #ececec;
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+ h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    color: #294a70;
+    margin-bottom: 20px;
+}
+
+#sidecard p {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+}
+
+#maincard p {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 5px;
+}
+#loggedincard p {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+main a {
+    margin: 0 auto;
+}
+
+button {
+    color: white;
+    background-color: #294a70;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 12px 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 300px;
+    margin: 20px 0;
+    border: none;
+}
+
+.log-btn{
+    border-radius: 7px;
+    background-color: #e0bee8;
+    cursor: pointer;
+    width: 70px;
+    margin-right: auto;
+    height: 30px;
+    padding: 5px;
+    border: rgb((254, 218, 218)5, 165, 42) solid 1px;
+}
+.log {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+

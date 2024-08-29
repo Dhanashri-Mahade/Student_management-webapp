@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2? family=Poppins:wght@300;400;500;600&dispaly=swap");
+:root {
+  --main-color: #923aff;
+  --color-dark: #1d2231;
+  --text-grey: #848f9f;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+.sidebar {
+  width: 300px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: var(--main-color);
+  z-index: 100;
+}
+.sidebar-title {
+  height: 90px;
+  padding: 1rem 0rem 1rem 2rem;
+  color: #fff;
+}
+.sidebar-title span {
+  display: inline-block;
+  padding-right: 1rem;
+}
+/* changed part start */
+.sidebar-menu {
+  margin-top: 1rem;
+  margin-top: 1rem;
+  overflow: hidden; /* Hide overflowing content when sidebar is closed */
+  transition: margin-left 0.3s; /* Add smooth transition */
+}
+.sidebar-closed .sidebar-menu {
+  margin-left: -300px; /* Adjust the value to match the sidebar width */
+}
+.sidebar-menu li {
+  width: 100%;
+  margin-bottom: 1.3rem;
+  padding-left: 1rem;
+  transition: padding-left 0.3s; /* Add smooth transition */
+}
+.sidebar-closed .sidebar-menu li {
+  padding-left: 0;
+}
+/* changed part end */
+
+.sidebar-menu a {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.sidebar-menu a span:first-child {
+  font-size: 1.1rem;
+  padding-right: 1.1rem;
+}
+.la,
+.las {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 30px;
+}
+.sidebar-menu a.active {
+  background: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--main-color);
+  font-weight: bold;
+  border-radius: 30px 0px 0px 30px;
+}
+.main-content {
+  margin-left: 300px;
+}
+
+header {
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 2px 2px 5px 0px gray;
+  position: fixed;
+  width: calc(100% - 300px);
+  top: 0;
+  background: white;
+}
+header h2 {
+  color: var(--main-color);
+}
+
+.header-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-wrapper {
+  display: flex;
+  align-items: center;
+}
+.user-wrapper img {
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: #848f9f solid 1.2px;
+}
+
+.user-wrapper small {
+  display: inline-block;
+  color: var(--text-grey);
+}
+main {
+  margin-top: 80px;
+  padding: 2rem 1.5rem;
+  background: rgb(239, 217, 255);
+  min-height: calc(100vh - 80px);
+}
+
+.box {
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgb(239, 217, 255);
+  padding: 12px 14px;
+  font-size: 17px;
+  color: black;
+  margin-bottom: 10px;
+  border: #1d2231 1.5px solid;
+}
+.btn-addmark {
+  width: 170px;
+  border-radius: 5px;
+  height: 47px;
+  background: rgb(142, 231, 255);
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000000;
+}
+.select-sub {
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+}
+.table-responsive {
+  width: 100%;
+  overflow: auto;
+}
+thead tr {
+  border-top: 1.5px solid #5e5656;
+  border-bottom: 1.5px solid #5e5656;
+}
+thead td {
+  font-weight: 700;
+}
+td {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  border: solid 1px #5e5656;
+}
+/* Tost notification */
+.toast-container {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.toast {
+  max-width: 350px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  padding-right: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(-20px);
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.toast .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #4eedff;
+  cursor: pointer;
+}
+.progress {
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+}
+.progress .bar {
+  height: 100%;
+  width: 0;
+  background-color: #4eedff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 7s linear;
+}
+.bar.show {
+  width: 100%;
+}
+
+/* print result */
+
+.print-only {
+  display: none;
+}
+.bottom {
+  display: none;
+}
+
+@media print {
+  /* Hide other elements */
+  body * {
+    visibility: hidden;
+  }
+
+  /* display print container element */
+  .print-container,
+  .print-container * {
+    visibility: visible;
+  }
+  /* Adjusting the position of table */
+  .print-container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  h4,
+  h3 {
+    text-align: center;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .bottom {
+    display: block !important;
+    text-align: right;
+    margin-top: 50px;
+  }
+}
+
+button.print-btn {
+  padding: 5px;
+  color: var(--main-color);
+  font-size: 15px;
+  margin-top: 20px;
+  border: 2px solid var(--main-color);
+  border-radius: 8px;
+}
+/* print result end */
+
+/* New style */
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    width: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  header {
+    width: 100%;
+  }
+}
+
+/* Add this at the end of your CSS file */
+.sidebar-closed .sidebar {
+  width: 0;
+}
+
+.sidebar-closed .main-content {
+  margin-left: 0;
+}
+
+.sidebar-closed header {
+  width: 100%;
+}
+
+/* for mobile screen */
+.small-screen .sidebar-menu li {
+  display: none;
+}
+
+.small-screen .sidebar-menu a.active {
+  background: transparent;
+  color: #fff;
+}
+
+.small-screen .sidebar-menu a.active:before {
+  content: "\f00a"; /* Add an icon (e.g., a checkmark) for active link */
+  font-family: "Line Awesome Free";
+  padding-right: 1rem;
+}

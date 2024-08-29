@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+   --blue:#3498db;
+   --dark-blue:#2980b9;
+   --red:#e74c3c;
+   --dark-red:#c0392b;
+   --black:#333;
+   --white:#fff;
+   --light-bg:#eee;
+   --box-shadow:0 5px 10px rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border: none;
+   text-decoration: none;
+}
+
+*::-webkit-scrollbar{
+   width: 10px;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: var(--blue);
+}
+
+.message{
+    margin:10px 0;
+    width: 100%;
+    border-radius: 5px;
+    padding:10px;
+    text-align: center;
+    background-color: var(--red);
+    color:var(--white);
+    font-size: 20px;
+ }
+
+
+.container .profile{
+    padding:20px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    width: 400px;
+    border-radius: 5px;
+ }
+ 
+ .container .profile img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+ }
+ 
+ .container .profile h3{
+    margin:5px 0;
+    font-size: 20px;
+    color:var(--black);
+ }
+ 
+ .container .profile p{
+    margin-top: 20px;
+    color:var(--black);
+    font-size: 20px;
+ }
+ 
+ .container .profile p a{
+    color:var(--red);
+ }
+ 
+ .container .profile p a:hover{
+    text-decoration: underline;
+ }
+ .btn,
+.delete-btn{
+   width: 100%;
+   border-radius: 5px;
+   padding:10px 30px;
+   color:var(--white);
+   display: block;
+   text-align: center;
+   cursor: pointer;
+   font-size: 20px;
+   margin-top: 10px;
+}
+
+.btn{
+   background-color: var(--blue);
+}
+
+.btn:hover{
+   background-color: var(--dark-blue);
+}
+
+.delete-btn{
+   background-color: var(--red);
+}
+
+.delete-btn:hover{
+   background-color: var(--dark-red);
+}
